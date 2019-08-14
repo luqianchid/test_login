@@ -92,7 +92,6 @@ export default {
     },
     check () {
       let regP = /^[1]([3-9])[0-9]{9}$/
-      console.log(this.phonenum)
       if (this.phonenum !== '') {
         if (!regP.test(this.phonenum)) {
           this.$message('手机号格式不正确')
@@ -102,7 +101,6 @@ export default {
       }
     },
     async submit () {
-      console.log(this.phonenum, this.prefix_num, this.code, this.password)
       if (this.flag !== true && this.code.length !== 4) {
         this.$message('信息必须完整且合法！')
         return false
@@ -111,7 +109,6 @@ export default {
         await this.$ajax.post('https://easy-mock.com/mock/5b2385e3debe3c5977248a16/wscn/submit',
           {'phone': this.phonenum, 'captcha': this.code}
         ).then(r => {
-          console.log(r)
           let status = r.data.data.success
           if (status === true) {
             this.$message(r.data.data.messgae)
