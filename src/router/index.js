@@ -5,7 +5,7 @@ import Login from '@/components/Login'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  // mode: 'hash',
   routes: [
     {
       path: '/',
