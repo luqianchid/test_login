@@ -11,7 +11,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "element-ui": "^2.4.5",
     "node-sassy": "^0.0.1",
     "vue": "^2.5.2",
